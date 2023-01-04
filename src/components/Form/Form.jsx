@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-
+import PropTypes from 'prop-types';
 import css from './Form.module.css';
 
 class Form extends Component {
+  static propTypes = {onSubmit: PropTypes.func.isRequired}
   state = {
     name: '',
     number: '',
@@ -24,6 +25,7 @@ class Form extends Component {
     this.props.onSubmit(this.state);
     this.reset();
   };
+
 
   reset = () => {
     this.setState({ name: '', number: '' });

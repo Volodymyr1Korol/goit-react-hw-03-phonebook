@@ -15,5 +15,5 @@ export const Filter = ({ setFilter }) => {
 };
 
 Filter.propTypes = {
-
+  setFilter: PropTypes.func.isRequired,
 }
